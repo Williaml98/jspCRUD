@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Add New User</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    h1 {
+        color: #333;
+    }
+    .button {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 10px;
+    }
+    .view-button {
+        background-color: #008CBA;
+        margin-left: 10px;
+    }
+    form {
+        max-width: 400px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    table {
+        width: 100%;
+    }
+    td {
+        padding: 10px;
+    }
+    input[type="text"],
+    input[type="password"],
+    input[type="email"] {
+        width: calc(100% - 20px);
+        padding: 8px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        box-sizing: border-box;
+    }
+    select {
+        width: calc(100% - 20px);
+        padding: 8px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        box-sizing: border-box;
+    }
+    input[type="submit"] {
+        width: calc(100% - 20px);
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 0;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        font-size: 16px;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+</style>
+</head>
+<body>
+
+<h1>Add New User</h1>
+<a href="viewusers.jsp" class="button view-button">View All Records</a>
+<form action="adduser.jsp" method="post">
+<table>
+<tr><td>Name:</td><td><input type="text" name="name"/></td></tr>
+<tr><td>Password:</td><td><input type="password" name="password"/></td></tr>
+<tr><td>Email:</td><td><input type="email" name="email"/></td></tr>
+<tr><td>Sex:</td><td><input type="radio" name="sex" value="male"/>Male <input type="radio" name="sex" value="female"/>Female </td></tr>
+<tr><td>Country:</td><td>
+<select name="country">
+<option value="DRC">DRC</option>
+<option value="Togo">Togo</option>
+<option value="Rwanda">Rwanda</option>
+<option value="Kenya">Kenya</option>
+<option value="Other">Other</option>
+</select>
+</td></tr>
+<tr><td colspan="2"><input type="submit" class="button" value="Add User"/></td></tr>
+</table>
+</form>
+
+</body>
+</html>
